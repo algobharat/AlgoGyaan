@@ -1,3 +1,5 @@
+[YouTube Video Link](https://www.youtube.com/watch?v=nM_3nqkGF3I&t=875s&ab_channel=AlgoBharat)
+
 Some useful commands for initializing, updating or removing AlgoKit in the future.
 
 - To initialize AlgoKit: `algokit init`
