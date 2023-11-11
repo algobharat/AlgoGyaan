@@ -1,5 +1,5 @@
-# Account 1 creates an asset called `rug` with a total supply
-# of 1000 units and sets itself to the freeze/clawback/manager/reserve roles
+# Account 1 creates an asset called `rug` with a total supply of 1000 units and sets itself to the freeze/clawback/manager/reserve roles
+
 sp = algod_client.suggested_params()
 txn = transaction.AssetConfigTxn(
     sender=acct1.address,
@@ -21,6 +21,7 @@ stxn = txn.sign(acct1.private_key)
 # Send the transaction to the network and retrieve the txid.
 txid = algod_client.send_transaction(stxn)
 print(f"Sent asset create transaction with txid: {txid}")
+
 # Wait for the transaction to be confirmed
 results = transaction.wait_for_confirmation(algod_client, txid, 4)
 print(f"Result confirmed in round: {results['confirmed-round']}")
